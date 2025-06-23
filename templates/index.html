@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>We're Hiring!</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f4f8; }
+    .hero {
+      position: relative; height: 200px; background: linear-gradient(135deg, #6a11cb, #2575fc);
+      display: flex; align-items: center; justify-content: center; color: white; overflow: hidden;
+    }
+    .hero h1 { font-size: 2.5em; z-index: 2; }
+    .shape-circle {
+      position: absolute; width: 300px; height: 300px; border-radius: 50%;
+      background: rgba(255,255,255,0.2); top: -50px; right: -100px;
+    }
+    .shape-square {
+      position: absolute; width: 200px; height: 200px;
+      background: rgba(255,255,255,0.15); bottom: -50px; left: -50px;
+      transform: rotate(20deg);
+    }
+
+    section { padding: 40px; max-width: 1000px; margin: auto; display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+    .job-card {
+      background: white; border-radius: 12px; padding: 20px; position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    .job-card::before {
+      content: ''; position: absolute; width: 100px; height: 100px;
+      background: var(--shape-color); opacity: 0.2; top: -30px; right: -30px;
+      transform: rotate(45deg);
+    }
+    .job-card h2 { margin-top: 0; color: #333; }
+    .job-card p { color: #555; }
+    .apply { display: inline-block; margin-top: 16px; padding: 10px 16px; background: #2575fc;
+      color: white; border-radius: 6px; text-decoration: none;
+    }
+    .apply:hover { background: #1a5bb8; }
+
+    footer { text-align: center; padding: 20px; color: #888; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="shape-circle"></div>
+    <div class="shape-square"></div>
+    <h1>We’re Hiring!</h1>
+  </div>
+
+  <section>
+    <div class="job-card" style="--shape-color:#6a11cb">
+      <h2>Java Developer</h2><p>Build enterprise Java apps.</p>
+      <a href="#" class="apply">Apply Now</a>
+    </div>
+
+    <div class="job-card" style="--shape-color:#2575fc">
+      <h2>C++ Developer</h2><p>Develop high-performance C++ modules.</p>
+      <a href="#" class="apply">Apply Now</a>
+    </div>
+
+    <div class="job-card" style="--shape-color:#28a745">
+      <h2>Python Developer</h2><p>Write clean and efficient Python code.</p>
+      <a href="#" class="apply">Apply Now</a>
+    </div>
+
+    <div class="job-card" style="--shape-color:#e83e8c">
+      <h2>PHP Developer</h2><p>Maintain and improve PHP applications.</p>
+      <a href="#" class="apply">Apply Now</a>
+    </div>
+
+    <div class="job-card" style="--shape-color:#fd7e14">
+      <h2>Data Analyst</h2><p>Analyze data to drive business decisions.</p>
+      <a href="#" class="apply">Apply Now</a>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 Your Company Name</footer>
+
+</body>
+</html>
