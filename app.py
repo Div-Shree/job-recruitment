@@ -42,4 +42,8 @@ def admin():
     return render_template('admin.html', total_jobs=total_jobs, total_cands=total_cands, cands=candidates)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(
+        host='0.0.0.0',
+        port=int(os.getenv('PORT', 5000)),
+        debug=True
+    )
