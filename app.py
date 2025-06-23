@@ -41,9 +41,7 @@ def admin():
         c['job'] = next(j for j in jobs if j['id']==c['job_id'])
     return render_template('admin.html', total_jobs=total_jobs, total_cands=total_cands, cands=candidates)
 
+
 if __name__ == '__main__':
-    app.run(
-        host='0.0.0.0',
-        port=int(os.getenv('PORT', 5000)),
-        debug=True
-    )
+    # Use Waitress for production
+    serve(app, host='0.0.0.0', port=5000)
